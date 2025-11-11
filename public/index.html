@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sunrise University — Admissions</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand">Sunrise University</h1>
+      <nav class="nav">
+        <a href="#overview">Overview</a>
+        <a href="#courses">Courses</a>
+        <a href="#placements">Placements</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="hero" class="hero">
+      <div class="hero-left">
+        <h2>Build your future with industry-aligned programs</h2>
+        <p class="lead">Undergraduate &amp; Postgraduate courses in Engineering, Management, Design and more.</p>
+        <div class="cta-row">
+          <button id="feesBtn" class="btn" data-university="sunrise">Check Course-wise Fees</button>
+          <a href="brochure-sunrise.pdf" class="btn outline" download>Download Brochure</a>
+          <button id="applyBtn" class="btn primary" onclick="document.getElementById('leadFormSection').scrollIntoView({behavior:'smooth'})">Apply Now</button>
+        </div>
+      </div>
+      <div class="hero-right">
+        <img alt="campus" src="https://via.placeholder.com/420x280?text=Sunrise+Campus" />
+      </div>
+    </section>
+
+    <section id="overview" class="card">
+      <h3>Overview</h3>
+      <p>Sunrise University is a private university focused on practical learning and close industry ties. Accredited programs, labs and placement support.</p>
+      <ul class="features">
+        <li>Modern labs &amp; workshops</li>
+        <li>Industry internships</li>
+        <li>Placement assistance</li>
+      </ul>
+    </section>
+
+    <section id="courses" class="card">
+      <h3>Courses</h3>
+      <div class="courses-grid">
+        <article>
+          <h4>B.Tech</h4>
+          <p>Computer Science, Electronics, Mechanical</p>
+        </article>
+        <article>
+          <h4>MBA</h4>
+          <p>Finance, Marketing, HR</p>
+        </article>
+        <article>
+          <h4>Design</h4>
+          <p>UX/UI & Product Design</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="placements" class="card">
+      <h3>Placements</h3>
+      <p>Top recruiters: Acme, ByteSoft, MegaBank. Average package: ₹6.2 LPA</p>
+    </section>
+
+    <section id="leadFormSection" class="card form-card">
+      <h3>Request a Callback</h3>
+      <form id="leadForm" novalidate>
+        <div class="form-grid">
+          <label>
+            Full Name
+            <input name="name" id="name" required />
+          </label>
+          <label>
+            Email
+            <input name="email" id="email" type="email" required />
+          </label>
+          <label>
+            Phone
+            <input name="phone" id="phone" inputmode="numeric" maxlength="10" required />
+          </label>
+          <label>
+            State
+            <select name="state" id="state" required>
+              <option value="">Select state</option>
+              <option>Delhi</option><option>Maharashtra</option><option>Karnataka</option>
+            </select>
+          </label>
+          <label>
+            Course Interested
+            <select name="course" id="course" required>
+              <option value="">Select course</option>
+              <option>B.Tech</option><option>MBA</option><option>Design</option>
+            </select>
+          </label>
+          <label>
+            Intake Year
+            <select name="intake" id="intake" required>
+              <option value="">Select intake</option>
+              <option>2025</option><option>2026</option><option>2027</option>
+            </select>
+          </label>
+        </div>
+
+        <label class="consent">
+          <input type="checkbox" id="consent" name="consent" required /> I agree to be contacted about admissions.
+        </label>
+
+        <div id="formMsg" class="form-msg" aria-live="polite"></div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Submit</button>
+          <button type="reset" class="btn outline">Reset</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- Modal for fees -->
+  <div id="feesModal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <button id="closeModal" class="modal-close" aria-label="Close modal">✕</button>
+      <h3>Course-wise Fees</h3>
+      <div id="feesContent">
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer container">
+    <p>&copy; Sunrise University</p>
+  </footer>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>
