@@ -1,0 +1,20 @@
+{
+  "university": "Sunrise University",
+  "courses": [
+    {
+      "name": "B.Tech (Computer Science)",
+      "minFee": 90000,
+      "maxFee": 150000
+    },
+    {
+      "name": "MBA (Finance)",
+      "minFee": 120000,
+      "maxFee": 200000
+    },
+    {
+      "name": "Design (UX/UI)",
+      "minFee": 100000,
+      "maxFee": 180000
+    }
+  ]
+}

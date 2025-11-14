@@ -1,5 +1,5 @@
 {
-  "name": "kollege-assessment",
+  "name": "practice-project",
   "version": "1.0.0",
   "description": "Assessment project - two landing pages + simple API",
   "main": "server/server.js",

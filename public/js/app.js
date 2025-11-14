@@ -4,7 +4,7 @@ const feesModal = document.getElementById('feesModal');
 const feesContent = document.getElementById('feesContent');
 const closeModal = document.getElementById('closeModal');
 
-const API_BASE = '/api'; // if hosting an API on same domain; change if different
+const API_BASE = './api'; 
 
 // event: open modal and load fees
 feesBtn?.addEventListener('click', async (e) => {
@@ -13,7 +13,7 @@ feesBtn?.addEventListener('click', async (e) => {
   feesModal.setAttribute('aria-hidden','false');
 
   try {
-    const res = await fetch(`${API_BASE}/fees/${uni}`);
+    const res = await fetch(`${API_BASE}/fees/${uni}.json`);
     if (!res.ok) throw new Error('Failed to load');
     const data = await res.json();
     renderFees(data);
@@ -43,8 +43,8 @@ function renderFees(data){
 const leadForm = document.getElementById('leadForm');
 const formMsg = document.getElementById('formMsg');
 
-// IMPORTANT: replace this with your Pipedream webhook URL
-let PIPEDREAM_ENDPOINT = 'https://eou3vduo4hzefha.m.pipedream.net'; // <-- replace
+// Replace this with your Pipedream webhook URL
+let PIPEDREAM_ENDPOINT = 'https://eou3vduo4hzefha.m.pipedream.net';
 
 // phone validation helper (India 10-digit)
 function validIndianPhone(phone) {
